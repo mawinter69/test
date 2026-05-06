@@ -1,3 +1,3 @@
 parameters {
-   string(name: 'ENVIRONMENT', defaultValue: 'staging', description: 'Target deployment environment')
+   string(name: 'ENVIRONMENT', defaultValue: 'prod', description: 'Target deployment environment')
 }
