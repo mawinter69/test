@@ -68,7 +68,10 @@ pipeline {
             steps {
                 script {
                     def versionPlatformInput = input message: 'Version and Platforms to copy', parameters: [activeChoice(choiceType: 'PT_CHECKBOX', description: 'linuxx86_64,linuxppc64le', filterLength: 1, filterable: false, name: 'platforms', script: groovyScript(fallbackScript: [classpath: [], oldScript: '', sandbox: true, script: 'return ["linuxx86_64","linuxppc64le"]'], script: [classpath: [], oldScript: '', sandbox: true, script: 'return ["linuxx86_64","linuxppc64le"]'])), string(description: 'Version to copy', name: 'version')]
-
+                    def platforms = versionPlatformInput['platforms'].split(',')
+                    for (platform in platforms) {
+                        echo platform
+                    }
                     echo('Start build step')
                 }
             }
