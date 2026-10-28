@@ -1,1 +1,1 @@
-{"data":{"items":[{"value":"price","label":"Quote service"}, {value: "admin", label: "Administration service"} ]}}
+{"data":{"items":[{"value":"price","label":"Quote service"}, {"value": "admin", "label": "Administration service"} ]}}
